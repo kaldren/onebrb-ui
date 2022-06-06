@@ -2,7 +2,9 @@
 
 public partial class App : Application
 {
-	public App()
+    public static string ApiEndpoint = "https://onebrb.azurewebsites.net/hello";
+
+    public App()
 	{
 		InitializeComponent();
 
