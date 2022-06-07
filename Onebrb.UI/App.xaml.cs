@@ -1,4 +1,6 @@
-﻿namespace Onebrb.UI;
+﻿using Onebrb.UI.Pages;
+
+namespace Onebrb.UI;
 
 public partial class App : Application
 {
@@ -8,6 +10,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        MainPage = new NavigationPage(new SignInPage());
+
+    }
 }

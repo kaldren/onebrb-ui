@@ -4,8 +4,11 @@
              x:Class="Onebrb.UI.Pages.SignInPage"
              Title="SignInPage">
     <StackLayout>
-        <Label Text="Welcome to .NET MAUI!"
+        <Label Text="Please, sign to Onebrb"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+
+        <Button Text="Sign in with Google" x:Name="signInBtn" Clicked="signInBtn_Clicked" />
+
     </StackLayout>
 </ContentPage>

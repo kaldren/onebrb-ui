@@ -1,5 +1,6 @@
 ﻿using Microsoft.Identity.Client;
 using Onebrb.UI.Core.Auth;
+using Onebrb.UI.Pages;
 
 namespace Onebrb.UI;
 
@@ -8,7 +9,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+    }
 
     private async void SignInBtn_Clicked(object sender, EventArgs e)
     {
