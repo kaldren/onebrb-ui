@@ -26,6 +26,7 @@ public partial class MainPage : ContentPage
         slUser.IsVisible = isSignedIn;
         lblApi.Text = "";
     }
+
     public void UpdateUserInfo(UserContext userContext)
     {
         lblName.Text = userContext.Name;
@@ -46,6 +47,7 @@ public partial class MainPage : ContentPage
                 await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
         }
     }
+
     async void OnResetPassword(object sender, EventArgs e)
     {
         try
@@ -61,6 +63,7 @@ public partial class MainPage : ContentPage
                 await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
         }
     }
+
     async void OnPasswordReset()
     {
         try
