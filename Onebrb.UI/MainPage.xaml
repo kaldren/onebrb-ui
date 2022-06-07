@@ -16,14 +16,7 @@
                     <Label Text="Name: " FontAttributes="Bold" />
                     <Label FontAttributes="Bold" x:Name="lblName" />
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Job Title: " FontAttributes="Bold" />
-                    <Label FontAttributes="Bold" x:Name="lblJob" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="City: " FontAttributes="Bold" />
-                    <Label FontAttributes="Bold" x:Name="lblCity" />
-                </StackLayout>
+                
                 <StackLayout Orientation="Horizontal">
                     <Label Text="API Payload " FontAttributes="Bold" />
                     <Label x:Name="lblApi" />

@@ -15,7 +15,7 @@ namespace Onebrb.UI.Core.Auth
         public static string PolicyEditProfile = "b2c_1_edit_profile";
         public static string PolicyResetPassword = "b2c_1_reset";
 
-        public static string[] Scopes = { "" };
+        public static string[] Scopes = { "https://onebrb.onmicrosoft.com/api/access_as_user" };
 
         public static string AuthorityBase = $"https://{AzureADB2CHostname}/tfp/{Tenant}/";
         public static string AuthoritySignInSignUp = $"{AuthorityBase}{PolicySignUpSignIn}";

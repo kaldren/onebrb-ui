@@ -2,7 +2,7 @@
 
 public partial class App : Application
 {
-    public static string ApiEndpoint = "https://onebrb.azurewebsites.net/hello";
+    public static string ApiEndpoint = "https://onebrbapi20220607132206.azurewebsites.net/weatherforecast";
 
     public App()
 	{
