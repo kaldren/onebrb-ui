@@ -10,5 +10,10 @@
 
         <Button Text="Sign in with Google" x:Name="signInBtn" Clicked="signInBtn_Clicked" />
 
+        <Label Text=""
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+               x:Name="signInStatusLabel"/>
+
     </StackLayout>
 </ContentPage>
