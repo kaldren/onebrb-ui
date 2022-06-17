@@ -4,12 +4,16 @@
              x:Class="Onebrb.UI.Pages.ProfilePage"
              Title="ProfilePage">
     <StackLayout>
-        <Label Text="Profile page"
+        <Label Text="Find a profile"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-        <Label Text="" x:Name="profileFirstName" />
-        <Label Text="" x:Name="profileLastName" />
-        
+        <Entry x:Name="profileId" Placeholder="Enter a profile id" />
+        <Button x:Name="profileBtn" Text="Find" Clicked="profileBtn_Clicked" />
+
+        <Label x:Name="profileFirstName" />
+        <Label x:Name="profileLastName" />
+        <Label x:Name="profileEmail" />
+
     </StackLayout>
 </ContentPage>

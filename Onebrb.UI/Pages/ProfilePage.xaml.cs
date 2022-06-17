@@ -1,3 +1,6 @@
+using Newtonsoft.Json;
+using Onebrb.UI.Models;
+
 namespace Onebrb.UI.Pages;
 
 public partial class ProfilePage : ContentPage
@@ -15,16 +18,22 @@ public partial class ProfilePage : ContentPage
 
     protected async override void OnAppearing()
     {
-        //HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "Profile/2");
+        //loading.Text = "Loading profile...";
+    }
 
+    private async void profileBtn_Clicked(object sender, EventArgs e)
+    {
         var result = await httpClient.GetAsync("profiles/2");
 
         if (result.IsSuccessStatusCode)
         {
-            profileFirstName.Text = await result.Content.ReadAsStringAsync();
-            var content = await result.Content.ReadAsStringAsync();
+            var jsonResult = await result.Content.ReadAsStringAsync();
+            var profile = JsonConvert.DeserializeObject<ProfileModel>(jsonResult);
 
-            return;
+
+            profileFirstName.Text = profile.FirstName;
+            profileLastName.Text = profile.LastName;
+            profileEmail.Text = profile.Email;
         }
     }
 }
