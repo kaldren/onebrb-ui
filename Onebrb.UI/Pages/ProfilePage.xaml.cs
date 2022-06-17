@@ -23,7 +23,8 @@ public partial class ProfilePage : ContentPage
 
     private async void profileBtn_Clicked(object sender, EventArgs e)
     {
-        var result = await httpClient.GetAsync("profiles/2");
+        var profileId = profileIdEntry.Text;
+        var result = await httpClient.GetAsync($"profiles/{profileId}");
 
         if (result.IsSuccessStatusCode)
         {

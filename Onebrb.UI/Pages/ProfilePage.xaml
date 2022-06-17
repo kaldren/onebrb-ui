@@ -8,7 +8,7 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-        <Entry x:Name="profileId" Placeholder="Enter a profile id" />
+        <Entry x:Name="profileIdEntry" Placeholder="Enter a profile id" />
         <Button x:Name="profileBtn" Text="Find" Clicked="profileBtn_Clicked" />
 
         <Label x:Name="profileFirstName" />
