@@ -7,5 +7,9 @@
         <Label Text="Profile page"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+
+        <Label Text="" x:Name="profileFirstName" />
+        <Label Text="" x:Name="profileLastName" />
+        
     </StackLayout>
 </ContentPage>
