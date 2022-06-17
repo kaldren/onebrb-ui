@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fontAwesome="clr-namespace:FontAwesome"
              x:Class="Onebrb.UI.Pages.ProfilePage"
              Title="ProfilePage">
     <StackLayout>
@@ -11,9 +12,14 @@
         <Entry x:Name="profileIdEntry" Placeholder="Enter a profile id" />
         <Button x:Name="profileBtn" Text="Find" Clicked="profileBtn_Clicked" />
 
-        <Label x:Name="profileFirstName" />
-        <Label x:Name="profileLastName" />
+        <Label x:Name="profileAbout" />
+        <Label x:Name="profileName" />
+        <Label x:Name="profilePhone" />
         <Label x:Name="profileEmail" />
 
+        <Label Text="{x:Static fontAwesome:FontAwesomeIcons.House}"/>
+        <Button
+            Text="{x:Static fontAwesome:FontAwesomeIcons.House}"
+            FontFamily="FA-S"/>
     </StackLayout>
 </ContentPage>
