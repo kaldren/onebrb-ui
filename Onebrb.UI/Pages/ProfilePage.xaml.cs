@@ -36,6 +36,10 @@ public partial class ProfilePage : ContentPage
         //    profileEmail.Text = profile.Email;
         //}
 
+        mainLayout.VerticalOptions = LayoutOptions.Start;
+        profileSearchLayout.IsVisible = false;
+        profileLayout.IsVisible = true;
+
         var profileModel = new ProfileModel
         {
             About = "Hairdresser located in LA",
@@ -49,5 +53,11 @@ public partial class ProfilePage : ContentPage
         profileAbout.Text = profileModel.About;
         profileEmail.Text = profileModel.Email;
         profilePhone.Text = profileModel.Phone;
+    }
+
+    private void appointmentBtn_Clicked(object sender, EventArgs e)
+    {
+        appointmentDate.IsVisible = true;
+        appointmentDate.Focus();
     }
 }

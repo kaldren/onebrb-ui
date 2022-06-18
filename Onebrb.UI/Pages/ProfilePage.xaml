@@ -3,23 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:fontAwesome="clr-namespace:FontAwesome"
              x:Class="Onebrb.UI.Pages.ProfilePage"
-             Title="ProfilePage">
-    <StackLayout>
-        <Label Text="Find a profile"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+             Title="Search profile">
+    <StackLayout x:Name="mainLayout" VerticalOptions="Center">
 
-        <Entry x:Name="profileIdEntry" Placeholder="Enter a profile id" />
-        <Button x:Name="profileBtn" Text="Find" Clicked="profileBtn_Clicked" />
+        <StackLayout x:Name="profileSearchLayout" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="true">
+            <Entry x:Name="profileIdEntry" Placeholder="Enter a profile id" />
 
-        <Label x:Name="profileAbout" />
-        <Label x:Name="profileName" />
-        <Label x:Name="profilePhone" />
-        <Label x:Name="profileEmail" />
+            <Button 
+                x:Name="profileBtn" 
+                Text="{x:Static fontAwesome:FontAwesomeIcons.MagnifyingGlass}"
+                FontFamily="FA-S" 
+                Clicked="profileBtn_Clicked" />
+        </StackLayout>
 
-        <Label Text="{x:Static fontAwesome:FontAwesomeIcons.House}"/>
-        <Button
-            Text="{x:Static fontAwesome:FontAwesomeIcons.House}"
-            FontFamily="FA-S"/>
+        <FlexLayout x:Name="profileLayout" AlignContent="SpaceEvenly" Direction="Column" IsVisible="false" Margin="20">
+            <StackLayout Orientation="Horizontal" Margin="20, 20">
+                <Label Text="{x:Static fontAwesome:FontAwesomeIcons.CircleInfo}" FontFamily="FA-S" FontSize="28" TextColor="#333652" VerticalOptions="Center" Margin="0, 0, 10, 0"/>
+                <Label x:Name="profileAbout" VerticalOptions="Center" FontSize="16" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="20, 20">
+                <Label Text="{x:Static fontAwesome:FontAwesomeIcons.User}" FontFamily="FA-S" FontSize="28" TextColor="#333652" VerticalOptions="Center" Margin="0, 0, 10, 0"/>
+                <Label x:Name="profileName" VerticalOptions="Center" FontSize="16" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="20, 20">
+                <Label Text="{x:Static fontAwesome:FontAwesomeIcons.Phone}" FontFamily="FA-S" FontSize="28" TextColor="#333652" VerticalOptions="Center" Margin="0, 0, 10, 0"/>
+                <Label x:Name="profilePhone" FontSize="16" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="20, 20">
+                <Label Text="{x:Static fontAwesome:FontAwesomeIcons.At}" FontFamily="FA-S" FontSize="28" TextColor="#333652" VerticalOptions="Center" Margin="0, 0, 10, 0"/>
+                <Label x:Name="profileEmail" FontSize="16" />
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="20 0">
+                <Button x:Name="appointmentBtn" Text="Schedule appointment" Clicked="appointmentBtn_Clicked" />
+
+                <DatePicker 
+                    x:Name="appointmentDate"
+                    MinimumDate="01/01/2022"
+                    MaximumDate="12/31/2022"
+                    Date="06/21/2022"
+                    IsVisible="false"
+                    HorizontalOptions="Center"
+                />
+            </StackLayout>
+        </FlexLayout>
+
     </StackLayout>
 </ContentPage>
