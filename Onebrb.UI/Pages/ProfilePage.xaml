@@ -37,7 +37,7 @@
                 <Label x:Name="profileEmail" FontSize="16" />
             </StackLayout>
 
-            <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="20 0">
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="20, 20">
                 <Button x:Name="appointmentBtn" Text="Schedule appointment" Clicked="appointmentBtn_Clicked" />
 
                 <DatePicker 

@@ -57,6 +57,7 @@ public partial class ProfilePage : ContentPage
 
     private void appointmentBtn_Clicked(object sender, EventArgs e)
     {
+        appointmentDate.Unfocus();
         appointmentDate.IsVisible = true;
         appointmentDate.Focus();
     }
